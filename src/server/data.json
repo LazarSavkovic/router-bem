@@ -1,0 +1,9 @@
+[
+    {"name": "yellow banana", "category": "bananas", "price": 50},
+    {"name": "red banana", "category": "bananas", "price": 41},
+    {"name": "red apple", "category": "apples", "price": 40},
+    {"name": "blue apple", "category": "apples", "price": 75},
+    {"name": "yellow apple", "category": "apples", "price": 44},
+    {"name": "big orange", "category": "oranges", "price": 33},
+    {"name": "small orange", "category": "oranges", "price": 40}
+]

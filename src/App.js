@@ -1,25 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import {Routes, Route, Link} from 'react-router-dom'
+import Home from './Home.js'
+import Products from './Products.js'
+import {  GoogleApiWrapper } from 'google-maps-react';
+import MapContainer from './MapContainer';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <nav>
+        <Link to='/' style={{margin: '30px'}}>home</Link>
+        <Link to='/products/apples' style={{margin: '30px'}}>apples</Link>
+        <Link to='/products/oranges' style={{margin: '30px'}}>oranges</Link>
+        <Link to='/products/bananas' style={{margin: '30px'}}>banana</Link>
+        <Link to='/maps' style={{margin: '30px'}}>Maps</Link>
+      </nav>
+      <Routes>
+        <Route path='/' element={<Home/>} ></Route>
+        <Route path='/maps' element={<MapContainer/>} ></Route>
+        <Route path='/products/:product' element={<Products />} />
+       </Routes>
+      
+
     </div>
   );
 }
 
-export default App;
+export default GoogleApiWrapper({
+  apiKey: 'YOUR_GOOGLE_MAPS_API_KEY_GOES_HERE'
+})(App);

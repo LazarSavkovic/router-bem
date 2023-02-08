@@ -11,3 +11,32 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.Products {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.Card {
+
+  border: solid 2px black;
+  width: 180px;
+  margin: 20px;
+  box-shadow: 5px 10px #888888;;
+
+}
+
+.Card__title {
+  letter-spacing: 2px;
+}
+
+.Card__category {
+  color: grey;
+}
+
+.Card__price {
+  font-weight: 800;
+}
