@@ -4,22 +4,22 @@ import allProducts from './server/data.json'
 import Card from './Card';
 
 function Products() {
-    const { product } = useParams()
+  const { product } = useParams()
 
-    const products = allProducts.filter(prod => {
-        if (prod.category === product) {
-            return prod
-                  }
-    })
+  const products = allProducts.filter(prod => {
+    if (prod.category === product) {
+      return prod
+    }
+  })
 
-    return (
-      <div className="Products">
-     <h1>{`Product: ${product}`}</h1>
-{products.map(  prod => 
-    <Card product={prod} />)}
-     
-      </div>
-    );
-  }
-  
-  export default Products;
+  return (
+    <div className="Products">
+      <h1>{`Product: ${product}`}</h1>
+      {products.map(prod =>
+        <Card product={prod} key={prod.name}/>)}
+
+    </div>
+  );
+}
+
+export default Products;

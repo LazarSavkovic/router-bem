@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: 'Dosis', sans-serif;
+}
+
+
+.Navbar {
+    background-color: cadetblue;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid red; */
+}
+
+.logo {
+    margin-left: 20px;
+    letter-spacing: 3px;
+    color: white;
+}
+
+.navBtns {
+    display: flex;
+    flex-direction: row;
+}
+
+.timesBtn {
+    display: none;
+    cursor: pointer;
+    background-color: cadetblue;
+    border: none;
+    color: white;
+    margin: 10px;
+}
+
+.barsBtn {
+    display: none;
+    cursor: pointer;
+    background-color: cadetblue;
+    border: none;
+    color: white;
+    margin: 10px;
+}
+
+.bulbBtn {
+    cursor: pointer;
+    background-color: cadetblue;
+    border: none;
+    color: white;
+    margin: 10px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .Navbar nav {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        right: 0px;
+        top: -500px;
+        background-color: cadetblue;
+        align-items: flex-start;
+        transition: all;
+        transition-duration: 200ms;
+    }
+
+    .Navbar .shown {
+        top: 0px;
+    }
+
+    .Navbar nav .Links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Navbar nav .timesBtn {
+        display: block;
+    }
+
+    .barsBtn {
+        display: block;
+    }
+
+}
