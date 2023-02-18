@@ -2,7 +2,6 @@ import './App.css';
 import {Routes, Route, Link} from 'react-router-dom'
 import Home from './Home.js'
 import Products from './Products.js'
-import {  GoogleApiWrapper } from 'google-maps-react';
 import MapContainer from './MapContainer';
 
 function App() {
@@ -26,6 +25,4 @@ function App() {
   );
 }
 
-export default GoogleApiWrapper({
-  apiKey: 'YOUR_GOOGLE_MAPS_API_KEY_GOES_HERE'
-})(App);
+export default App;

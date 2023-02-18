@@ -23,6 +23,15 @@ export class CurrentLocation extends React.Component {
         }
       };
     }
+
+
+    componentDidUpdate(prevProps, prevState) {
+        if (prevProps.google !== this.props.google) {
+          this.loadMap();
+        }
+        if (prevState.currentLocation !== this.state.currentLocation) {
+          this.recenterMap();
+        }
   
   
   // ...
